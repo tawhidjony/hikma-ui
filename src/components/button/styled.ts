@@ -4,7 +4,7 @@ import { UiButtonProps } from './types';
 
 
 export const ButtonStyle = styled.button<UiButtonProps>`
-  background: ${(props) => (props.primary ? 'palevioletred' : '#f5f5f5')};
+  background: ${(props) => (props.primary ? '#f5f5f5' : '#f5f5f5')};
   color: ${(props) => (props.primary ? 'white' : 'palevioletred')};
   font-size: ${(props) => {
     switch (props.size) {
