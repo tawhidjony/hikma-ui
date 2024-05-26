@@ -15,16 +15,27 @@ const meta = {
         control:{
             type:"text"
         }
+    },
+    primary:{
+      control:{
+        type:"boolean"
+      }
+    },
+    size:{
+      control:{
+        type:"select",
+        options: ['small', 'medium', 'large'],
+      }
     }
   },
   args: { onClick: fn() },
 } satisfies Meta<typeof UiButton>;
-
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const PrimaryButton:Story = {
     args:{
-        children:"click me"
+      children:"Hello",
+      primary: false
     }
 }
