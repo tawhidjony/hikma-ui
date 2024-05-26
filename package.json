@@ -1,6 +1,6 @@
 {
   "name": "hikma-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is a ui library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
