@@ -1,11 +1,8 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
-  },
-  variants: {
     extend: {
-      colors: {
+      colors:{
         'primary': {
           '50': '#ebfef5',
           '100': '#d0fbe6',
@@ -21,6 +18,9 @@ module.exports = {
         },
       }
     },
+  },
+  variants: {
+    extend: {},
   },
   plugins: [],
 }
