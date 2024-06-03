@@ -1,8 +1,8 @@
 import React from "react";
 
-export interface UiButtonProps {
+export interface UiButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick: () => void;
   children: React.ReactNode;
-  primary?: boolean;
+  varient?: 'primary' | 'secondary' | 'outline' | 'success';
   size?: 'small' | 'medium' | 'large';
-}
+} 

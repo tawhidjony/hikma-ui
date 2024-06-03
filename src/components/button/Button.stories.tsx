@@ -16,9 +16,9 @@ const meta = {
             type:"text"
         }
     },
-    primary:{
+    varient:{
       control:{
-        type:"boolean"
+        options: ['primary' , 'secondary' , 'outline' , 'success'],
       }
     },
     size:{
@@ -36,6 +36,6 @@ type Story = StoryObj<typeof meta>;
 export const PrimaryButton:Story = {
     args:{
       children:"Hello",
-      primary: false
+      varient: 'primary'
     }
 }

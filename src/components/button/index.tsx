@@ -1,12 +1,11 @@
 
-import { ButtonStyle } from "./styled";
 import { type UiButtonProps } from "./types";
 
 const UiButton: React.FC<UiButtonProps> = ({ onClick, children }) => {
   return (
-    <ButtonStyle onClick={onClick} data-testid="page-container">
+    <button onClick={onClick} className="bg-primary-500">
       {children}
-    </ButtonStyle>
+    </button>
   );
 };
 

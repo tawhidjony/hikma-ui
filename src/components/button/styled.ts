@@ -4,8 +4,8 @@ import { UiButtonProps } from './types';
 
 
 export const ButtonStyle = styled.button<UiButtonProps>`
-  background: ${(props) => (props.primary ? '#f5f5f5' : '#f5f5f5')};
-  color: ${(props) => (props.primary ? 'white' : 'palevioletred')};
+  background: ${(props) => (props.varient ? '#f5f5f5' : '#f5f5f5')};
+  color: ${(props) => (props.varient ? 'white' : 'palevioletred')};
   font-size: ${(props) => {
     switch (props.size) {
       case 'small':
@@ -32,6 +32,6 @@ export const ButtonStyle = styled.button<UiButtonProps>`
   cursor: pointer;
 
   &:hover {
-    background: ${(props) => (props.primary ? '#d45d79' : '#f7d6db')};
+    background: ${(props) => (props.varient ? '#d45d79' : '#f7d6db')};
   }
 `;
