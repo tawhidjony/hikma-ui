@@ -8,7 +8,7 @@
     "dist",
     "README.md"
   ],
-  "homepage": "https://github.com/tawhidjony/hikma-datepicker",
+  "homepage": "https://github.com/tawhidjony/hikma-ui",
   "peerDependencies": {
     "react": ">=17.0.0",
     "react-dom": ">=17.0.0"
@@ -32,7 +32,7 @@
   },
   "author": "tawhidjony",
   "license": "MIT",
-  "description": "Hikma UI is a collection of components for building modern, responsive web applications.",
+  "description": "Hikma UI is a collection of unstyled, headless React components that provide functionality without enforcing any specific styling. While built with TailwindCSS support, the components are style-agnostic and can be fully customized to match any design system.",
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@tailwindcss/cli": "^4.0.3",
@@ -60,9 +60,16 @@
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/tawhidjony/hikma-datepicker/issues"
+    "url": "https://github.com/tawhidjony/hikma-ui/issues"
   },
   "keywords": [
+    "ui",
+    "tailwindcss",
+    "react",
+    "typescript",
+    "form",
+    "button",
+    "grid",
     "datepicker",
     "date and time",
     "tailwindcss date picker",

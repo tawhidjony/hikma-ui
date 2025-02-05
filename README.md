@@ -1,86 +1,44 @@
-# hikma-datepicker - A Simple and Flexible React Datepicker Component
+# Hikma UI - A Modern Headless React Component Library based on TailwindCSS and React Hook Form
 
-![NPM Version](https://img.shields.io/npm/v/hikma-datepicker)
-![License](https://img.shields.io/npm/l/hikma-datepicker)
+![NPM Version](https://img.shields.io/npm/v/hikma-ui)
+![License](https://img.shields.io/npm/l/hikma-ui)
+
+
 
 ## Description
-**hikma-datepicker** is a lightweight and flexible date picker reusable component, designed for easy integration into web applications. Customize date formats, styles, and locales effortlessly.
-
-![image info](./src/assets/datepicker.png)
-
+**Hikma UI** is a collection of unstyled, headless React components that provide functionality without enforcing any specific styling. While built with TailwindCSS support, the components are style-agnostic and can be fully customized to match any design system.
 
 ## Features
-- Simple and lightweight date picker.
-- Fully customizable date formats and themes.
-- Compatible with Reactjs JavaScript & Typescript.
+- Headless components with complete styling flexibility
+- Zero default styles - bring your own CSS
+- Built with TailwindCSS support (optional)
+- Supports React with TypeScript
+- Includes unstyled form components with React Hook Form integration
+- Flexible button system with customizable variants and states
+## Prerequisites
+- Node.js (v14.0 or later)
+- React (v17.0 or later)
+- TailwindCSS (v4.0 or later)
+- React Hook Form (v7.0 or later)
+- Zod (v3.0 or later)
+- Zod resolver (v3.0 or later)
+
+## Dependencies
+
+Before installing Hikma UI, ensure you have the following peer dependencies installed:
+
+```bash
+npm install react-hook-form zod @hookform/resolvers tailwindcss @tailwindcss/vite
+```
 
 ## Installation
 
 Install the package via NPM:
-
 ```bash
-npm install hikma-datepicker
+npm install hikma-ui --save
 ```
 
-Install the package via YARN:
 
-```bash
-yarn hikma-datepicker
-```
-Example :
-```
-import { UiDatepicker } from "hikma-datepicker";
-import 'hikma-datepicker/dist/index.css';
 
-const Example = () => {
-  return (
-   <UiDatepicker 
-        disablePastDates={true} 
-        dateFormat='dd-MM-yyyy' 
-        onChange={(e) => alert(JSON.stringify(e))} 
-   />
-  );
-};
-```
 
-Example with Tailwindcss :
-```
-import { UiDatepicker } from "hikma-datepicker";
-
-const Example = () => {
-  return (
-   <UiDatepicker 
-        disablePastDates={true} 
-        dateFormat='dd-MM-yyyy' 
-        onChange={(e) => alert(JSON.stringify(e))} 
-   />
-  );
-};
-```
-Configuration with Tailwindcss for change your won color :
-```
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],  // Watch only the src folder
-  theme: {
-    extend: {
-      colors: {
-        primary: {
-          50: "#f4f1ff",
-          100: "#ebe5ff",
-          200: "#d7cfff",
-          300: "#bba8ff",
-          400: "#9b77ff",
-          500: "#7d40ff",
-          600: "#6f19ff",
-          700: "#6207fa",
-          800: "#5206d1",
-          900: "#4507ac",
-          950: "#270075",
-        },
-      },
-    },
-  },
-  plugins: [],
-}
-```
 
