@@ -2,9 +2,9 @@ name: Commitlint
 
 on:
   pull_request:
-    branches: [ main, next ]
+    branches: [ main, next, alpha ]
   push:
-    branches: [ main, next ]
+    branches: [ main, next, alpha ]
 
 jobs:
   commitlint:
