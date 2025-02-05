@@ -1,13 +1,27 @@
-# name: Check lint commit message
+name: Commitlint
 
-# on: [pull_request, push]
+on:
+  pull_request:
+    branches: [ main, next ]
+  push:
+    branches: [ main, next ]
 
-# jobs: 
-#   commitlint:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v3
-#         with:
-#           fetch-depth: 0
-
-#       - uses: wagoid/commitlint-github-action@v6
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Check commit messages
+        uses: wagoid/commitlint-github-action@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
