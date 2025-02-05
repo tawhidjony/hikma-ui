@@ -19,3 +19,5 @@ export type UiFormProps<TSchema extends ZodType> = {
     children: React.ReactNode;
     ref?: Ref<UiFormRefProps<z.infer<TSchema>>>
 }
+
+export default UiFormRefProps;
