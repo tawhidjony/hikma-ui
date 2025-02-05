@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { UiFormContext } from "../../contexts/UiFormContext";
 import { UiFormProps } from "./types/UiForm";
 import UiInput from "./Input";
+import { FieldArray } from "./UiFieldArray";
 
 const UiForm = <TSchema extends ZodType>(props: UiFormProps<TSchema>) => {
 
@@ -39,5 +40,5 @@ const UiForm = <TSchema extends ZodType>(props: UiFormProps<TSchema>) => {
 
 UiForm.displayName = 'UiForm'
 UiForm.Input = UiInput
-
+UiForm.Array = FieldArray
 export default UiForm;

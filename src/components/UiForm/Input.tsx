@@ -22,7 +22,11 @@ const  UiInput = <T extends FieldValues>(props: UiFormInputProps<T>) => {
                 <Fragment>
                   <input 
                     type="text" 
-                    className={cn("border border-gray-300 rounded-md p-2 w-full", rest.className)}
+                    className={cn(
+                        "border border-gray-300 rounded p-2 bg-gray-50 outline-0 w-full", 
+                        rest.className,
+                        fieldState?.error && "border-red-500"
+                      )}
                     {...field}
                     {...rest}
                   />
