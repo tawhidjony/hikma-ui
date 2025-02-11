@@ -19,16 +19,16 @@
 - Node.js (v14.0 or later)
 - React (v17.0 or later)
 - TailwindCSS (v4.0 or later)
-- React Hook Form (v7.0 or later)
 - Zod (v3.0 or later)
-- Zod resolver (v3.0 or later)
+<!-- - React Hook Form (v7.0 or later)
+- Zod resolver (v3.0 or later) -->
 
 ## Dependencies
 
 Before installing Hikma UI, ensure you have the following peer dependencies installed:
 
 ```bash
-npm install react-hook-form zod @hookform/resolvers tailwindcss @tailwindcss/vite
+npm install zod  
 ```
 
 ## Installation
@@ -37,6 +37,71 @@ Install the package via NPM:
 ```bash
 npm install hikma-ui --save
 ```
+
+## Usage
+
+To use Hikma UI, import the components you need from the library. For example:
+
+```tsx live
+import { useRef } from 'react';
+import { UiForm, UiButton, UIFormRef } from 'hikma-ui';
+import { z } from "zod"
+
+const exampleSchema = z.object({
+    name: z.string().min(2),
+    email: z.string().email(),
+    examples: z.array(z.object({
+        name: z.string().min(2),
+        phone: z.string().min(10),
+    }))
+})
+
+type ExampleSchemaType = z.infer<typeof exampleSchema>
+
+const exampleDefaultValues: ExampleSchemaType = {
+    name: '',
+    email: '',
+    examples: [{ name: '', phone: ''} ],
+}
+
+const ExampleForm = () => {
+
+    const formRef = useRef<UIFormRef<ExampleSchemaType>>(null)
+    const onSubmitHandler = (value: ExampleSchemaType) => {
+        console.log(value)
+    } 
+
+    return (
+        <UIForm 
+            schema={exampleSchema} 
+            defaultValues={exampleDefaultValues} 
+            onSubmit={onSubmitHandler}
+            ref={formRef}
+        >
+            <UiGrid>
+                <UiGrid.Item className='xl:col-span-12'>
+                    <UIForm.Input<ExampleSchemaType> name="name" placeholder="Enter your name" />
+                </UiGrid.Item>
+                <UiGrid.Item className='xl:col-span-12'>
+                    <UIForm.Input<ExampleSchemaType> name="email" placeholder="Enter your email" />
+                </UiGrid.Item>
+                <UiGrid.Item className='xl:col-span-12'>
+                    <div className="flex justify-end">
+                        <UiButton label="Reset Form" onClick={()=>formRef.current?.reset()}  />
+                        <UiButton label="Submit" type="submit" />
+                    </div>
+                </UiGrid.Item>
+            </UiGrid>
+        </UIForm>
+    )
+}
+
+export default ExampleForm
+```
+
+
+
+
 
 
 
