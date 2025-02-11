@@ -83,11 +83,11 @@ const ExampleForm = () => {
                     <UIForm.Input<ExampleSchemaType> name="name" placeholder="Enter your name" />
                 </UiGrid.Item>
                 <UiGrid.Item className='xl:col-span-12'>
-                    <UIForm.Input<ExampleSchemaType> name="email" placeholder="Enter your email" />
+                    <UIForm.Select<ExampleSchemaType> name="email" placeholder="Enter your email" options={[{label: 'Option 1', value: '1'}]} />
                 </UiGrid.Item>
                 <UiGrid.Item className='xl:col-span-12'>
                     <div className="flex justify-end">
-                        <UiButton label="Reset Form" onClick={()=>formRef.current?.reset()}  />
+                        <UiButton label="Reset Form" onClick={()=>formRef.current?.reset()} variant="danger" />
                         <UiButton label="Submit" type="submit" />
                     </div>
                 </UiGrid.Item>
