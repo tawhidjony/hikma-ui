@@ -6,6 +6,8 @@ import { UiFormContext } from "../../contexts/UiFormContext";
 import { UiFormProps } from "./types/UiForm";
 import UiInput from "./Input";
 import { FieldArray } from "./UiFieldArray";
+import UiTextArea from "./TextArea";
+import UiSelect from "./Select";
 
 const UiForm = <TSchema extends ZodType>(props: UiFormProps<TSchema>) => {
 
@@ -40,5 +42,7 @@ const UiForm = <TSchema extends ZodType>(props: UiFormProps<TSchema>) => {
 
 UiForm.displayName = 'UiForm'
 UiForm.Input = UiInput
+UiForm.Select = UiSelect
+UiForm.TextArea = UiTextArea
 UiForm.Array = FieldArray
 export default UiForm;
