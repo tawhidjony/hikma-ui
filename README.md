@@ -3,8 +3,6 @@
 ![NPM Version](https://img.shields.io/npm/v/hikma-ui)
 ![License](https://img.shields.io/npm/l/hikma-ui)
 
-
-
 ## Description
 **Hikma UI** is a collection of unstyled, headless React components that provide functionality without enforcing any specific styling. While built with TailwindCSS support, the components are style-agnostic and can be fully customized to match any design system.
 
@@ -65,12 +63,10 @@ const exampleDefaultValues: ExampleSchemaType = {
 }
 
 const ExampleForm = () => {
-
     const formRef = useRef<UIFormRef<ExampleSchemaType>>(null)
     const onSubmitHandler = (value: ExampleSchemaType) => {
         console.log(value)
     } 
-
     return (
         <UIForm 
             schema={exampleSchema} 
@@ -95,7 +91,6 @@ const ExampleForm = () => {
         </UIForm>
     )
 }
-
 export default ExampleForm
 ```
 
